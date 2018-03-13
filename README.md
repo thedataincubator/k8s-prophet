@@ -6,7 +6,7 @@ It also has a service description for a Kubernetes deployment exposed a service.
 
 Notes: It expects a secret_key environment variable to authenticate requests.
 
-## Deploy Instructions
+## Deploy Instructions for Backend
 
 1. Build Docker image
 2. Push to Docker repo (same one specified in deployment

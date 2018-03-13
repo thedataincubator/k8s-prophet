@@ -10,7 +10,7 @@ Notes: It expects a secret_key environment variable to authenticate requests.
 
 1. Build Docker image
 2. Push to Docker repo (same one specified in deployment
-3. With access to cluster run `kubectl apply -f prophet.yaml
+3. With access to cluster run `kubectl apply -f prophet.yaml -n $NAMESPACE
 
 ## Run Locally
 1. Build Docker image (use -t option to tag a name, say prophet)

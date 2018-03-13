@@ -9,10 +9,9 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def calc():
     try:
-        key = request.args['key']
-        if key != os.environ['secret_key']:
+        if request.args['key'] != os.environ['secret_key']:
             return jsonify(dict(message='invalid key')), 400
-    except:
+    except KeyError:
         return jsonify(dict(message='invalid key')), 400
     try:
         data = json.loads(request.data)

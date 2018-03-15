@@ -37,5 +37,8 @@ spec:
         env:
         - name: secret_key
           value: "IHaWZnwE8SobnIAe27x8y+0y0iWIkzW9TVwD08hvPT4="
+        resources:
+          limits:
+            memory: "6Gb"
         ports:
         - containerPort: 5000

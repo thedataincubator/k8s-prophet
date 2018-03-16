@@ -9,21 +9,22 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def calc():
     try:
-        if request.args['key'] != os.environ['secret_key']:
-            return jsonify(dict(message='invalid key')), 400
-    except KeyError:
-        return jsonify(dict(message='invalid key')), 400
-    try:
         data = json.loads(request.data)
     except Exception:
         return jsonify(dict(message="invalid data format")), 400
+    try:
+        key = data['key']
+    except KeyError:
+        return jsonify(dict(message='no key submitted')), 400
+    if key != os.environ['secret_key']:
+        return jsonify(dict(message='invalid key')), 400
     try:
         ds = data['ds']
         y = data['y']
     except KeyError:
         return jsonify(dict(message='invalid input')), 400
         
-    periods = request.args.get('periods', 100)
+    periods = data.get('periods', 100)
     m = Prophet()
     df = pd.DataFrame(dict(ds=ds, y=y))
     m.fit(df)

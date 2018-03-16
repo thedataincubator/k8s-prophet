@@ -14,7 +14,7 @@ Notes: It expects a secret_key environment variable to authenticate requests.
 
 ## Run Locally
 1. Build Docker image (use -t option to tag a name, say prophet)
-2. Run `docker run -it -p 5000:5000 image_name` 
+2. Run `docker run -it -p 5000:5000 -e secret_key=<secret_key> image_name` 
 3. Access on localhost:5000 
 
 TODO:

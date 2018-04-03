@@ -21,7 +21,10 @@ def index():
                 y=[str(i) for i in df['y'].values],
                 key=SECRET_KEY)
 
+  # TODO handle errors from post request
   r = requests.post(PROPHET_URL, data=json.dumps(params))
+
+  # TODO Do we need error handling on this?
   prediction = pd.DataFrame(json.loads(r.text))
   prediction['ds'] = pd.to_datetime(prediction['ds'])
   df['ds'] = pd.to_datetime(df['ds'])

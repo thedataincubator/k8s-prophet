@@ -18,7 +18,7 @@ metadata:
   labels:
     app: prophet
 spec:
-  replicas: 1
+  replicas: 2
   strategy: 
     rollingUpdate:
       maxUnavailable: 1
@@ -33,12 +33,12 @@ spec:
       serviceAccountName: default
       containers:
       - name: prophet-container
-        image: gcr.io/mooc-hub/prophet
+        image: quay.io/zachglassman/prophet
         env:
         - name: secret_key
           value: "IHaWZnwE8SobnIAe27x8y+0y0iWIkzW9TVwD08hvPT4="
         resources:
           limits:
-            memory: "6Gb"
+            memory: "6Gi"
         ports:
         - containerPort: 5000

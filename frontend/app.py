@@ -1,5 +1,5 @@
 import os
-from stockticker import create_app
+from forecaster import create_app
 
 PROPHET_URL = os.environ['PROPHET_URL']
 SECRET_KEY = os.environ['SECRET_KEY']

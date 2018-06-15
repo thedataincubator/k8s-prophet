@@ -1,11 +1,11 @@
-# stockpredict [![Build Status](https://travis-ci.org/thedataincubator/stockpredict.svg?branch=master)](https://travis-ci.org/thedataincubator/stockpredict)
+# Forecaster [![Build Status](https://travis-ci.org/thedataincubator/forecaster.svg?branch=master)](https://travis-ci.org/thedataincubator/forecaster)
 
 Tasks:
 1. Clone repo locally, ask Zach to get permissions to push branches
 2. Choose an issue to work on and comment that you want to work on it.  Or create your own issue and comment that you want to work on that.
 3. Make a branch (or two or three or ...) and open up a PR with a change you like.
 4. Ask for a review from a peer.
-5. Ask for a review from Zach or Dylan.
+5. Ask for a review from Zach, Tim or Dylan.
 6. Once both reviews are passed, MERGE AWAY!
 
 Some useful commands:

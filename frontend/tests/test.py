@@ -1,7 +1,7 @@
 import unittest
 import requests
 import responses
-from stockticker import create_app
+from forecaster import create_app
 
 class TestApp(unittest.TestCase):
 
